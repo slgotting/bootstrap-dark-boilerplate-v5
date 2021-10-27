@@ -38,7 +38,7 @@ $body-bg-3: #fff;
 $body-bg-4: #fff;
 $body-bg-5: #fff;
 
-
+$primary: #875adc;
 
 
 // Required
@@ -90,8 +90,8 @@ $body-bg-5: #fff;
 .dark {
 
     /* redefine theme colors for dark theme */
-    $primary: $blue-300;
-    $secondary: white;
+    $primary: white;
+    $secondary: $purple-300;
     $success: #222222;
     $dark: #000;
 

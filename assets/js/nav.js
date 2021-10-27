@@ -10,7 +10,7 @@ function changeDarkModeIcon(mode="dark") {
     var element = document.getElementById("dark-mode-toggle");
     element.innerHTML = `
         <svg class="bi" width="24" height="24">
-            <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#${(mode == 'dark') ? 'cloud-moon-fill' : 'brightness-high'}"/>
+            <use xlink:href="/static/bootstrap/node_modules/bootstrap-icons/bootstrap-icons.svg#${(mode == 'dark') ? 'cloud-moon-fill' : 'brightness-high'}"/>
         </svg>
     `;
 }
