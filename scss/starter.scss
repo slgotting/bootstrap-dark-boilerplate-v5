@@ -33,8 +33,13 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 // Customize some defaults
 $body-color: #333;
 $body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+$body-bg-2: #fff;
+$body-bg-3: #fff;
+$body-bg-4: #fff;
+$body-bg-5: #fff;
+
+
+
 
 // Required
 @import "bootstrap/scss/functions";
@@ -49,13 +54,13 @@ $success: #7952b3;
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
@@ -81,15 +86,179 @@ $success: #7952b3;
 @import "bootstrap/scss/utilities/api";
 
 
-//
-// Custom styles
-//
+
+.dark {
+
+    /* redefine theme colors for dark theme */
+    $primary: $blue-300;
+    $secondary: white;
+    $success: #222222;
+    $dark: #000;
+
+    $body-color: #eeeeee;
+    $body-bg: #121212;
+    $body-bg-2: #1d1d1d;
+    $body-bg-3: #212121;
+    $body-bg-4: #242424;
+    $body-bg-5: #272727;
+
+    $nav-link-hover-color: $body-bg-2;
+    $modal-content-bg: $body-bg-4;
+    $offcanvas-bg-color: $body-bg-4;
+    $list-group-bg: $body-bg-4;
+    $input-bg: $body-bg-3;
+    $input-focus-bg: $body-bg-3;
+    $input-color: $primary;
+    $input-focus-color: $primary;
+    $input-group-addon-color: $primary;
+    $input-group-addon-bg: $primary;
+    $component-active-color: $body-bg-2;
+    $component-active-bg: $primary;
+    $dropdown-bg: $body-bg-4;
+    $dropdown-color: $primary;
+    $dropdown-link-color: $secondary;
+    $popover-bg: $body-bg-2;
+
+    $link-color: $primary;
+
+    $theme-colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $success,
+        "danger": $danger,
+        "info": $indigo,
+        "dark": $dark,
+        "light": $light,
+    );
+
+    /* redefine theme color variables */
+    @each $color, $value in $theme-colors {
+        --#{$variable-prefix}#{$color}: #{$value};
+    }
+
+    /* redefine theme color rgb vars (used for bg- colors) */
+    $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+    @each $color, $value in $theme-colors-rgb {
+        --#{$variable-prefix}#{$color}-rgb: #{$value};
+    }
+
+    --#{$variable-prefix}body-color: #{$body-color};
+    --#{$variable-prefix}body-bg: #{$body-bg};
+
+    $border-color: #3c3c3c;
+    $input-border-color: #686868;
+
+
+
+
+.bg-1 {
+    background-color: $body-bg;
+}
+.bg-2 {
+    background-color: $body-bg-2;
+}
+.bg-3 {
+    background-color: $body-bg-3;
+}
+.bg-4 {
+    background-color: $body-bg-4;
+}
+.bg-5 {
+    background-color: $body-bg-5;
+}
+
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+// @import "helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+// @import "bootstrap/scss/bootstrap";
+
+}
+
+// //
+// // Custom styles
+// //
+
+.bg-1 {
+    background-color: $body-bg;
+}
+.bg-2 {
+    background-color: $body-bg-2;
+}
+.bg-3 {
+    background-color: $body-bg-3;
+}
+.bg-4 {
+    background-color: $body-bg-4;
+}
+.bg-5 {
+    background-color: $body-bg-5;
+}
+
+
+//    // @import "bootstrap";
+// }
+
+
 
 @import "icon-list";
 
+
+
 body {
-  padding: 1.5rem;
+    transition: background-color 1s ease, color 1s ease;
 }
+nav {
+    transition: background-color 1s ease, color 1s ease;
+}
+header {
+    transition: background-color 1s ease, color 1s ease;
+}
+footer {
+    transition: background-color 1s ease, color 1s ease;
+}
+
+
 
 // Style Bootstrap icons
 .bi {
