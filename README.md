@@ -2,7 +2,7 @@ This boilerplate was derived from:
 
 # [Bootstrap NPM Starter](https://github.com/twbs/bootstrap-npm-starter/tree/v5)
 
-see this for more details
+see that for initialization details
 
 
 
