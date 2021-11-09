@@ -28,3 +28,5 @@ import "/static/bootstrap/node_modules/bootstrap/js/dist/base-component.js";
 // Then your specific components
 import "/static/bootstrap/node_modules/bootstrap/js/dist/dropdown.js";
 import "/static/bootstrap/node_modules/bootstrap/js/dist/offcanvas.js";
+import "/static/bootstrap/node_modules/bootstrap/js/dist/toast.js";
+import "/static/bootstrap/node_modules/bootstrap/js/dist/modal.js";

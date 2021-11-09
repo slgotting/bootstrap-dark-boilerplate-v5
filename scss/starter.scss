@@ -46,6 +46,18 @@ $primary: #875adc;
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
+
+//Generate utilites for Cursor
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      values: auto default pointer wait text move help not-allowed
+    ),
+  )
+);
+
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
 
@@ -68,14 +80,14 @@ $primary: #875adc;
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 
@@ -90,10 +102,10 @@ $primary: #875adc;
 .dark {
 
     /* redefine theme colors for dark theme */
-    $primary: white;
+    $primary: $white;
     $secondary: $purple-300;
-    $success: #222222;
     $dark: #000;
+    $error: #e3342f;
 
     $body-color: #eeeeee;
     $body-bg: #121212;
@@ -120,12 +132,18 @@ $primary: #875adc;
     $popover-bg: $body-bg-2;
 
     $link-color: $primary;
+    $link-hover-color: $secondary;
+
+    $list-group-color:  $primary;
+
+
 
     $theme-colors: (
         "primary": $primary,
         "secondary": $secondary,
         "success": $success,
         "danger": $danger,
+        "error": $error,
         "info": $indigo,
         "dark": $dark,
         "light": $light,
@@ -145,10 +163,10 @@ $primary: #875adc;
     --#{$variable-prefix}body-color: #{$body-color};
     --#{$variable-prefix}body-bg: #{$body-bg};
 
-    $border-color: #3c3c3c;
     $input-border-color: #686868;
 
 
+    $border-color: rgb(29, 29, 29);
 
 
 .bg-1 {
@@ -172,6 +190,24 @@ $primary: #875adc;
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
+
+//Generate utilites for Cursor
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      values: auto default pointer wait text move help not-allowed
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      values: map-merge($theme-colors, ("white": $white))
+    ),
+  )
+);
+
+
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
 
@@ -194,14 +230,14 @@ $primary: #875adc;
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 
