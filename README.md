@@ -31,4 +31,4 @@ see that for initialization details
 
 ## Copyright
 
-&copy; @slgotting 2020-2021 and licensed MIT.
+&copy; @TwitchClip 2020-2021 and licensed MIT.
