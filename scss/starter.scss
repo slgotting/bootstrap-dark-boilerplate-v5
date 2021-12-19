@@ -287,6 +287,39 @@ $utilities: map-merge(
 
 // @import "bootstrap/scss/bootstrap";
 
+
+
+#load-more-clips-btn {
+    -webkit-animation: slg_dark_button_flash 1500ms infinite;
+    -moz-animation: slg_dark_button_flash 1500ms infinite;
+    -o-animation: slg_dark_button_flash 1500ms infinite;
+    animation: slg_dark_button_flash 1500ms infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes slg_dark_button_flash {
+    0% { background-color: #9147ff; -webkit-box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; -webkit-box-shadow: 0 0 20px -5px #9147ff; }
+    100% { background-color: #9147ff; -webkit-box-shadow: 0 0 3px #9147ff; }
+  }
+  @-moz-keyframes slg_dark_button_flash {
+    0% { background-color: #9147ff; -moz-box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; -moz-box-shadow: 0 0 20px -5px #9147ff; }
+    100% { background-color: #9147ff; -moz-box-shadow: 0 0 3px #9147ff; }
+  }
+
+  @-o-keyframes slg_dark_button_flash {
+    0% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; box-shadow: 0 0 20px -5px #9147ff; }
+    100% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+  }
+
+  @keyframes slg_dark_button_flash {
+    0% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; box-shadow: 0 0 20px -5px #9147ff; }
+    100% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+  }
+
 }
 
 // //
@@ -346,7 +379,7 @@ footer {
     background-color: #9147ff !important;
     background-image: var(--bs-gradient) !important;
     border-color: #9147ff !important;
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%) !important;
+    // box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%) !important;
 }
 
 .button-1:hover {
@@ -355,3 +388,35 @@ footer {
     background-image: var(--bs-gradient) !important;
     border-color: #6c48b0 !important;
 }
+
+
+#load-more-clips-btn {
+    -webkit-animation: slg_flash 1500ms infinite;
+    -moz-animation: slg_flash 1500ms infinite;
+    -o-animation: slg_flash 1500ms infinite;
+    animation: slg_flash 1500ms infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes slg_flash {
+    0% { background-color: #9147ff; -webkit-box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; -webkit-box-shadow: 0 0 40px #9147ff; }
+    100% { background-color: #9147ff; -webkit-box-shadow: 0 0 3px #9147ff; }
+  }
+  @-moz-keyframes slg_flash {
+    0% { background-color: #9147ff; -moz-box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; -moz-box-shadow: 0 0 40px #9147ff; }
+    100% { background-color: #9147ff; -moz-box-shadow: 0 0 3px #9147ff; }
+  }
+
+  @-o-keyframes slg_flash {
+    0% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; box-shadow: 0 0 40px #9147ff; }
+    100% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+  }
+
+  @keyframes slg_flash {
+    0% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+    50% { background-color: #9147ff; box-shadow: 0 0 40px #9147ff; }
+    100% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+  }
