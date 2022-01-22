@@ -108,11 +108,11 @@ $utilities: map-merge(
 
 
 .dark {
-  --shadow-elevation-1: 0 1px 2px rgb(0,0,0,0.5), 0 0px 2px rgb(0,0,0,0.5);
-  --shadow-elevation-2: 0 4px 8px rgb(0,0,0,0.5), 0 0px 4px rgb(0,0,0,0.5);
-  --shadow-elevation-3: 0 6px 16px rgb(0,0,0,0.55), 0 0px 4px rgb(0,0,0,0.0.5);
-  --shadow-elevation-4: 0 12px 32px rgb(0,0,0,0.6), 0 0px 8px rgb(0,0,0,0.0.5);
-  --shadow-elevation-5: 0 32px 64px rgb(0,0,0,0.65), 0 0px 16px rgb(0,0,0,0.0.5);
+  --shadow-elevation-1: 0 1px 2px 0 rgb(0,0,0,0.5), 0 0px 2px 0 rgb(0,0,0,0.5);
+  --shadow-elevation-2: 0 4px 8px 0 rgb(0,0,0,0.5), 0 0px 4px 0 rgb(0,0,0,0.5);
+  --shadow-elevation-3: 0 6px 16px 0 rgb(0,0,0,0.55), 0 0px 4px 0 rgb(0,0,0,0.5);
+  --shadow-elevation-4: 0 12px 32px 0 rgb(0,0,0,0.6), 0 0px 8px 0 rgb(0,0,0,0.5);
+  --shadow-elevation-5: 0 32px 64px 0 rgb(0,0,0,0.65), 0 0px 16px 0 rgb(0,0,0,0.5);
 
     /* redefine theme colors for dark theme */
     $primary: $white;
@@ -356,19 +356,19 @@ $utilities: map-merge(
 }
 
 .box-shadow-1 {
-    box-shadow: var(--shadow-elevation-1);
+    box-shadow: var(--shadow-elevation-1) !important;
 }
 .box-shadow-2 {
-    box-shadow: var(--shadow-elevation-2);
+    box-shadow: var(--shadow-elevation-2) !important;
 }
 .box-shadow-3 {
-    box-shadow: var(--shadow-elevation-3);
+    box-shadow: var(--shadow-elevation-3) !important;
 }
 .box-shadow-4 {
-    box-shadow: var(--shadow-elevation-4);
+    box-shadow: var(--shadow-elevation-4) !important;
 }
 .box-shadow-5 {
-    box-shadow: var(--shadow-elevation-5);
+    box-shadow: var(--shadow-elevation-5) !important;
 }
 
 
