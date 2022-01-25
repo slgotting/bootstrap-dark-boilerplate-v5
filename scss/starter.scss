@@ -328,9 +328,9 @@ $utilities: map-merge(
   }
 
   @keyframes slg_dark_button_flash {
-    0% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
-    50% { background-color: #9147ff; box-shadow: 0 0 20px -5px #9147ff; }
-    100% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+    0% { background-color: #9147ff; box-shadow: var(--shadow-elevation-1); }
+    50% { background-color: #9147ff; box-shadow: var(--shadow-elevation-3); }
+    100% { background-color: #9147ff; box-shadow: var(--shadow-elevation-1); }
   }
 
 }
@@ -445,7 +445,7 @@ footer {
   }
 
   @keyframes slg_flash {
-    0% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
-    50% { background-color: #9147ff; box-shadow: 0 0 40px #9147ff; }
-    100% { background-color: #9147ff; box-shadow: 0 0 3px #9147ff; }
+    0% { background-color: #9147ff; box-shadow: var(--shadow-elevation-1); }
+    50% { background-color: #9147ff; box-shadow: var(--shadow-elevation-3); }
+    100% { background-color: #9147ff; box-shadow: var(--shadow-elevation-1); }
   }
